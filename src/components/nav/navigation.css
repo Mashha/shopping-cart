@@ -12,6 +12,7 @@ nav {
 
 .nav-items {
   display: flex;
+  align-items: center;
   gap: 50px;
   list-style: none;
 }
@@ -19,4 +20,28 @@ nav {
 .nav-items li a {
   text-decoration: none;
   color: black;
+}
+
+.cart {
+  background: transparent;
+  padding: 7px;
+  border: 1px solid royalblue;
+  border-radius: 3px;
+  position: relative;
+}
+
+.items-number {
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  background-color: royalblue;
+  padding: 3px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  color: white;
 }
