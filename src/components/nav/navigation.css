@@ -1,0 +1,22 @@
+header {
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+  padding: 10px 0;
+}
+
+.nav-items {
+  display: flex;
+  gap: 50px;
+  list-style: none;
+}
+
+.nav-items li a {
+  text-decoration: none;
+  color: black;
+}
