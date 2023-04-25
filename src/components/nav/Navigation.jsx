@@ -11,10 +11,10 @@ function Navigation() {
         <h1>logo</h1>
         <ul className="nav-items">
           <li>
-            <Link to="#">Home</Link>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="#">Shop</Link>
+            <Link to="/shop">Shop</Link>
           </li>
           <li>
             <Link to="#">Contact</Link>

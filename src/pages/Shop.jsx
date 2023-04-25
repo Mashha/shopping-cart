@@ -1,8 +1,23 @@
+import { allProducts } from "../components/data/allProducts";
+import Card from "../components/card/Card";
+import "./styles/shop.css";
 
 function Shop() {
   return (
-    <div>Shop</div>
-  )
+    <>
+      <h1>Shop</h1>
+      <div className="container">
+        {allProducts.map((plant, index) => (
+          <Card
+            name={plant.name}
+            image={plant.image}
+            price={plant.price}
+            key={index}
+          />
+        ))}
+      </div>
+    </>
+  );
 }
 
-export default Shop
+export default Shop;
