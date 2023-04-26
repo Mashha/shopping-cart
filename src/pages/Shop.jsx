@@ -12,6 +12,7 @@ function Shop() {
             name={plant.name}
             image={plant.image}
             price={plant.price}
+            id={plant.id}
             key={index}
           />
         ))}

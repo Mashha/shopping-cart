@@ -6,6 +6,7 @@ import zzPlant from "../../images/plants/ZZ_plant.png";
 export const smallPlants = [
   {
     name: "Money Tree",
+    id: "money_tree",
     image: money_tree,
     price: 68,
     description:
@@ -13,6 +14,7 @@ export const smallPlants = [
   },
   {
     name: "Philodendron Birkin",
+    id: "philodendron_birkin",
     image: philodendron,
     price: 48,
     description:
@@ -20,6 +22,7 @@ export const smallPlants = [
   },
   {
     name: "Calathea Rattlesnake",
+    id: "calathea_rattlesnake",
     image: rattlesnake,
     price: 58,
     description:
@@ -27,6 +30,7 @@ export const smallPlants = [
   },
   {
     name: "ZZ Plant",
+    id: "zz-plant",
     image: zzPlant,
     price: 48,
     description:
