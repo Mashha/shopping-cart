@@ -1,0 +1,52 @@
+.main-plant {
+  width: 80%;
+  margin: 50px auto 0;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 50px;
+}
+
+.main-right {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 500px;
+}
+
+.main-right .name_price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid black;
+}
+
+.main-right h1 {
+  font-size: 40px;
+}
+
+.main-right h3 {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.main-right div {
+  font-size: 20px;
+  font-weight: 500px;
+}
+.main-right div p {
+  font-size: 16px;
+}
+
+.main-right .desc {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.main-right button {
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+}
