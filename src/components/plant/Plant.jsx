@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import "./plant.css";
 
 function Plant() {
-  const [plant, setPlant] = useState([]);
+  const [plant, setPlant] = useState(null);
   const params = useParams();
 
   useEffect(() => {
