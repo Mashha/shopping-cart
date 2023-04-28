@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { allProducts } from "../data/allProducts";
 import { useParams } from "react-router-dom";
 import formatCurrency from "../../utils/formatCurrency";
@@ -6,6 +7,7 @@ import "./plant.css";
 
 function Plant() {
   const [plant, setPlant] = useState(null);
+  const [showPlant, setShowPlant] = useState("");
   const params = useParams();
 
   useEffect(() => {
@@ -17,6 +19,10 @@ function Plant() {
     return currentPlant;
   }, [allProducts, params.productId]);
 
+  function changeImage(e) {
+    setShowPlant(e.target);
+  }
+
   return (
     <>
       {plant && (
@@ -24,14 +30,21 @@ function Plant() {
           <div className="main-left">
             <div className="small-images">
               <div className="image one">
-                <img src={plant.gallery[0]} alt="" />
+                <Link onClick={(e) => changeImage(e)}>
+                  <img src={plant.gallery[0]} alt="" />
+                </Link>
               </div>
               <div className="image two">
-                <img src={plant.gallery[1]} alt="" />
+                <Link onClick={(e) => changeImage(e)}>
+                  <img src={plant.gallery[1]} alt="" />
+                </Link>
               </div>
             </div>
             <div className="main-image">
-              <img src={plant.image} alt="" />
+              <img
+                src={showPlant === "" ? plant.image : showPlant.src}
+                alt=""
+              />
             </div>
           </div>
           <div className="main-right">
@@ -48,8 +61,6 @@ function Plant() {
               <p>{plant.description}</p>
             </div>
           </div>
-          {/* <div>{plant.name}</div>
-          <div>{plant.id}</div> */}
         </main>
       )}
     </>
