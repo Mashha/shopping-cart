@@ -50,3 +50,21 @@
   padding: 10px;
   border-radius: 10px;
 }
+
+.main-left {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 15px
+}
+
+.main-image img {
+  width: 100%;
+}
+
+.small-images .image{
+   width: 100px;
+}
+
+.small-images .image img {
+  width: 100%;
+}

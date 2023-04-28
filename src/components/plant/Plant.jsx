@@ -15,13 +15,23 @@ function Plant() {
     });
     return currentPlant;
   }, [allProducts, params.productId]);
-  console.log(params);
+
   return (
     <>
       {plant && (
         <main className="main-plant">
           <div className="main-left">
-            <img src={plant.image} alt="" />
+            <div className="small-images">
+              <div className="image one">
+                <img src={plant.gallery[0]} alt="" />
+              </div>
+              <div className="image two">
+                <img src={plant.gallery[1]} alt="" />
+              </div>
+            </div>
+            <div className="main-image">
+              <img src={plant.image} alt="" />
+            </div>
           </div>
           <div className="main-right">
             <div className="name_price">
