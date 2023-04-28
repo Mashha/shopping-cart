@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { allProducts } from "../data/allProducts";
 import { useParams } from "react-router-dom";
+import formatCurrency from "../../utils/formatCurrency";
 import "./plant.css";
 
 function Plant() {
@@ -36,7 +37,7 @@ function Plant() {
           <div className="main-right">
             <div className="name_price">
               <h1>{plant.name}</h1>
-              <h3>{plant.price}</h3>
+              <h3>{formatCurrency(plant.price)}</h3>
             </div>
             <div>
               Size: <span>{plant.size}</span>
