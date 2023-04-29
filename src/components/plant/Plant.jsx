@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 import { allProducts } from "../data/allProducts";
 import { useParams } from "react-router-dom";
 import formatCurrency from "../../utils/formatCurrency";
+
 import "./plant.css";
 
-function Plant() {
+function Plant({ item, setItem, setShowModal }) {
   const [plant, setPlant] = useState(null);
   const [showPlant, setShowPlant] = useState("");
   const params = useParams();
@@ -21,6 +22,11 @@ function Plant() {
 
   function changeImage(e) {
     setShowPlant(e.target);
+  }
+
+  function addItemToCart() {
+    setItem(item + 1);
+    setShowModal(true);
   }
 
   return (
@@ -55,7 +61,7 @@ function Plant() {
             <div>
               Size: <span>{plant.size}</span>
             </div>
-            <button>Add to cart</button>
+            <button onClick={addItemToCart}>Add to cart</button>
             <div className="desc">
               <h3>Description</h3>
               <p>{plant.description}</p>

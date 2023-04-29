@@ -2,10 +2,9 @@ import { useState } from "react";
 import "./navigation.css";
 import { Link } from "react-router-dom";
 import logo4 from "../../images/logo4.png";
+import Cart from "../cart/Cart";
 
-function Navigation() {
-  const [items, setItems] = useState(0);
-
+function Navigation({ item, showModal, setShowModal }) {
   return (
     <header>
       <nav>
@@ -23,10 +22,11 @@ function Navigation() {
           <li>
             <Link to="#">Contact</Link>
           </li>
-          <button className="cart">
+          <button className="nav-cart" onClick={() => setShowModal(true)}>
             <i className="fa-solid fa-cart-shopping"></i>
-            <span className="items-number">{items}</span>
+            <span className="items-number">{item}</span>
           </button>
+          <Cart showModal={showModal} onClose={() => setShowModal(false)} />
         </ul>
       </nav>
     </header>

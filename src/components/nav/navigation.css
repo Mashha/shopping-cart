@@ -55,12 +55,13 @@ nav {
   color: black;
 }
 
-.cart {
+.nav-cart {
   background: transparent;
   padding: 7px;
   border: 1px solid royalblue;
   border-radius: 3px;
   position: relative;
+  cursor: pointer;
 }
 
 .items-number {

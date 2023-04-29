@@ -7,14 +7,32 @@ import Navigation from "./components/nav/Navigation";
 import Plant from "./components/plant/Plant";
 
 function App() {
+  const [item, setItem] = useState(0);
+  const [showModal, setShowModal] = useState(false);
+
   return (
     <>
       <BrowserRouter>
-        <Navigation />
+        <Navigation
+          item={item}
+          setItem={setItem}
+          showModal={showModal}
+          setShowModal={setShowModal}
+        />
         <Routes>
           <Route path="/shopping-cart" element={<Home />} />
           <Route path="/shopping-cart/products" element={<Shop />} />
-          <Route path="/shopping-cart/products/:productId" element={<Plant />} />
+          <Route
+            path="/shopping-cart/products/:productId"
+            element={
+              <Plant
+                item={item}
+                setItem={setItem}
+                showModal={showModal}
+                setShowModal={setShowModal}
+              />
+            }
+          />
         </Routes>
       </BrowserRouter>
     </>
