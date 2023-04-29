@@ -1,6 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Fresca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+
 header {
   width: 100%;
-  height: 60px;
+  height: 70px;
+  display: flex;
   /* background: linear-gradient(to right, white 0%, white 50%, rgba(82, 122, 72, 0.53) 50%, rgba(82, 122, 72, 0.53) 100%); */
 }
 
@@ -10,6 +14,33 @@ nav {
   width: 80%;
   margin: auto;
   padding: 10px 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 70px;
+}
+
+.logo h1 {
+  color: rgba(0, 0, 0, 0.56);
+  position: relative;
+  font-family: "indie flower", sans-serif;
+}
+
+.logo h1:after {
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: #40b93c;
+  border-radius: 100%;
+  bottom: 11px;
+  right: -7px;
 }
 
 .nav-items {

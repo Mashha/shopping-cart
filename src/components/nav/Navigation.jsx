@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./navigation.css";
 import { Link } from "react-router-dom";
+import logo4 from "../../images/logo4.png";
 
 function Navigation() {
   const [items, setItems] = useState(0);
@@ -8,7 +9,10 @@ function Navigation() {
   return (
     <header>
       <nav>
-        <h1>logo</h1>
+        <div className="logo">
+          <img src={logo4} alt="" />
+          <h1>Botanic</h1>
+        </div>
         <ul className="nav-items">
           <li>
             <Link to="/shopping-cart">Home</Link>
