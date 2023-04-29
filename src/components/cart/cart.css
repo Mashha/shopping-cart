@@ -27,3 +27,20 @@
   font-size: 22px;
   cursor: pointer;
 }
+
+.shop-items {
+  flex: 1;
+}
+
+.shop-checkout {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.shop-checkout button {
+  border: none;
+  background-color:lightgreen;
+  padding: 10px;
+  cursor: pointer;
+}

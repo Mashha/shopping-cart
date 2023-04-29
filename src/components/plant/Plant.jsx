@@ -24,9 +24,12 @@ function Plant({ item, setItem, setShowModal }) {
     setShowPlant(e.target);
   }
 
+  
   function addItemToCart() {
     setItem(item + 1);
     setShowModal(true);
+    console.log(plant)
+
   }
 
   return (

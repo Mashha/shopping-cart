@@ -26,7 +26,7 @@ function Navigation({ item, showModal, setShowModal }) {
             <i className="fa-solid fa-cart-shopping"></i>
             <span className="items-number">{item}</span>
           </button>
-          <Cart showModal={showModal} onClose={() => setShowModal(false)} />
+          <Cart showModal={showModal} onClose={() => setShowModal(false)} item={item}/>
         </ul>
       </nav>
     </header>

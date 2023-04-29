@@ -1,6 +1,6 @@
 import "./cart.css";
 
-function Cart({ showModal, onClose }) {
+function Cart({ showModal, onClose, item }) {
   if (!showModal) {
     return null;
   }
@@ -10,7 +10,14 @@ function Cart({ showModal, onClose }) {
         <span className="btn-close" onClick={onClose}>
           <i className="fa-solid fa-xmark"></i>
         </span>
-        <h1>Shopping cart</h1>
+        <div>Your cart <span>({item})</span></div>
+        <div className="shop-items"></div>
+        <div className="shop-checkout">
+          <div>
+            <h3>Subtotal: </h3>
+          </div>
+          <button>Checkout</button>
+        </div>
       </div>
     </div>
   );
