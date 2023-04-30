@@ -73,9 +73,19 @@
   width: 100%;
 }
 
-.remove button {
+.cart-data-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.remove-cart-item {
   background: transparent;
   border: none;
   text-decoration: underline;
   font-style: italic;
+}
+
+.multiple-items {
+  display: flex;
+  gap: 10px;
 }

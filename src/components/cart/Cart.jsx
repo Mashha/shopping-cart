@@ -1,7 +1,8 @@
 import "./cart.css";
 import formatCurrency from "../../utils/formatCurrency";
+import { useState } from "react";
 
-function Cart({ showModal, onClose, item, cart, setCart }) {
+function Cart({ showModal, onClose, item, cart, setCart, total }) {
   if (!showModal) {
     return null;
   }
@@ -27,8 +28,13 @@ function Cart({ showModal, onClose, item, cart, setCart }) {
                   <h3>{item.name}</h3>
                   <p>{item.size}</p>
                   <h3>{formatCurrency(item.price)}</h3>
-                  <div className="remove">
-                    <button>Remove</button>
+                  <div className="cart-data-bottom">
+                    <div className="multiple-items">
+                      <button>-</button>
+                      <span>quantity</span>
+                      <button>+</button>
+                    </div>
+                    <button className="remove-cart-item">Remove</button>
                   </div>
                 </div>
               </div>
@@ -39,7 +45,7 @@ function Cart({ showModal, onClose, item, cart, setCart }) {
         </div>
         <div className="shop-checkout">
           <div>
-            <h3>Subtotal: </h3>
+            <h3>Subtotal: {total}</h3>
           </div>
           <button>Checkout</button>
         </div>
