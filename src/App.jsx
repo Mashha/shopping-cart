@@ -20,6 +20,7 @@ function App() {
           showModal={showModal}
           setShowModal={setShowModal}
           cart={cart}
+          setCart={setCart}
         />
         <Routes>
           <Route path="/shopping-cart" element={<Home />} />

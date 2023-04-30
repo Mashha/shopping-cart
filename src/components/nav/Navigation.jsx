@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import logo4 from "../../images/logo4.png";
 import Cart from "../cart/Cart";
 
-function Navigation({ item, showModal, setShowModal, cart }) {
+function Navigation({ item, showModal, setShowModal, cart, setCart }) {
   
   return (
     <header>
@@ -27,7 +27,7 @@ function Navigation({ item, showModal, setShowModal, cart }) {
             <i className="fa-solid fa-cart-shopping"></i>
             <span className="items-number">{item}</span>
           </button>
-          <Cart showModal={showModal} onClose={() => setShowModal(false)} item={item} cart={cart}/>
+          <Cart showModal={showModal} onClose={() => setShowModal(false)} item={item} cart={cart} setCart={setCart}/>
         </ul>
       </nav>
     </header>

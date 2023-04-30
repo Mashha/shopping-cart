@@ -72,3 +72,10 @@
 .cart-item-image img {
   width: 100%;
 }
+
+.remove button {
+  background: transparent;
+  border: none;
+  text-decoration: underline;
+  font-style: italic;
+}

@@ -1,7 +1,7 @@
 import "./cart.css";
 import formatCurrency from "../../utils/formatCurrency";
 
-function Cart({ showModal, onClose, item, cart }) {
+function Cart({ showModal, onClose, item, cart, setCart }) {
   if (!showModal) {
     return null;
   }
@@ -19,7 +19,7 @@ function Cart({ showModal, onClose, item, cart }) {
         <div className="shop-items">
           {cart ? (
             cart.map((item) => (
-              <div className="cart-item">
+              <div className="cart-item" key={item.id}>
                 <div className="cart-item-image">
                   <img src={item.image} alt="" />
                 </div>
@@ -27,6 +27,9 @@ function Cart({ showModal, onClose, item, cart }) {
                   <h3>{item.name}</h3>
                   <p>{item.size}</p>
                   <h3>{formatCurrency(item.price)}</h3>
+                  <div className="remove">
+                    <button>Remove</button>
+                  </div>
                 </div>
               </div>
             ))
