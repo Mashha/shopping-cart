@@ -40,7 +40,35 @@
 
 .shop-checkout button {
   border: none;
-  background-color:lightgreen;
+  background-color: lightgreen;
   padding: 10px;
   cursor: pointer;
+}
+
+.shop-items {
+  display: grid;
+  grid-gap: 10px;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  max-width: 350px;
+  padding: 10px 0;
+}
+
+.cart-data {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 20px;
+}
+
+.cart-data p {
+  text-transform: capitalize;
+  font-style: italic;
+}
+
+.cart-item-image img {
+  width: 100%;
 }

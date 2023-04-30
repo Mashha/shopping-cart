@@ -9,6 +9,7 @@ import Plant from "./components/plant/Plant";
 function App() {
   const [item, setItem] = useState(0);
   const [showModal, setShowModal] = useState(false);
+  const [cart, setCart] = useState([])
 
   return (
     <>
@@ -18,6 +19,7 @@ function App() {
           setItem={setItem}
           showModal={showModal}
           setShowModal={setShowModal}
+          cart={cart}
         />
         <Routes>
           <Route path="/shopping-cart" element={<Home />} />
@@ -30,6 +32,8 @@ function App() {
                 setItem={setItem}
                 showModal={showModal}
                 setShowModal={setShowModal}
+                cart={cart}
+                setCart={setCart}
               />
             }
           />

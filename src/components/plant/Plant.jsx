@@ -6,7 +6,7 @@ import formatCurrency from "../../utils/formatCurrency";
 
 import "./plant.css";
 
-function Plant({ item, setItem, setShowModal }) {
+function Plant({ item, setItem, setShowModal, cart, setCart }) {
   const [plant, setPlant] = useState(null);
   const [showPlant, setShowPlant] = useState("");
   const params = useParams();
@@ -24,12 +24,11 @@ function Plant({ item, setItem, setShowModal }) {
     setShowPlant(e.target);
   }
 
-  
   function addItemToCart() {
     setItem(item + 1);
     setShowModal(true);
-    console.log(plant)
-
+    setCart([...cart, plant]);
+    //localStorage.setItem("plant", JSON.stringify(plant))
   }
 
   return (
