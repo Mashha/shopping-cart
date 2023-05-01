@@ -2,10 +2,12 @@ import "./cart.css";
 import formatCurrency from "../../utils/formatCurrency";
 import { useState } from "react";
 
-function Cart({ showModal, onClose, item, cart, setCart, total }) {
+function Cart({ showModal, onClose, cart, setCart, total, cartQuantity }) {
   if (!showModal) {
     return null;
   }
+
+
 
   console.log(cart);
   return (
@@ -15,7 +17,7 @@ function Cart({ showModal, onClose, item, cart, setCart, total }) {
           <i className="fa-solid fa-xmark"></i>
         </span>
         <div>
-          Your cart <span>({item})</span>
+          Your cart <span>({cartQuantity})</span>
         </div>
         <div className="shop-items">
           {cart ? (
@@ -31,7 +33,7 @@ function Cart({ showModal, onClose, item, cart, setCart, total }) {
                   <div className="cart-data-bottom">
                     <div className="multiple-items">
                       <button>-</button>
-                      <span>quantity</span>
+                      <span>{item.qty}</span>
                       <button>+</button>
                     </div>
                     <button className="remove-cart-item">Remove</button>

@@ -6,7 +6,7 @@ import formatCurrency from "../../utils/formatCurrency";
 
 import "./plant.css";
 
-function Plant({ item, setItem, setShowModal, cart, setCart }) {
+function Plant({ setShowModal, cart, setCart, quantity, setQuantity }) {
   const [plant, setPlant] = useState(null);
   const [showPlant, setShowPlant] = useState("");
   const params = useParams();
@@ -25,9 +25,24 @@ function Plant({ item, setItem, setShowModal, cart, setCart }) {
   }
 
   function addItemToCart() {
-    setItem(item + 1);
     setShowModal(true);
-    setCart([...cart, plant]);
+    //if plant already exists add quantity, otherwise add plant with quantity one
+    let isInCart = false;
+    if (cart.length > 0) {
+      setCart(
+        cart.map((item) => {
+          if (item.name === plant.name) {
+            isInCart = true;
+            return { ...item, qty: item.qty + 1 };
+          }
+          return item;
+        })
+      );
+    }
+    if (!isInCart) {
+      setCart([...cart, plant]);
+    }
+
     //localStorage.setItem("plant", JSON.stringify(plant))
   }
 

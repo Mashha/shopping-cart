@@ -8,14 +8,16 @@ import Plant from "./components/plant/Plant";
 import Cart from "./components/cart/Cart";
 
 function App() {
-  const [item, setItem] = useState(0);
   const [showModal, setShowModal] = useState(false);
   const [cart, setCart] = useState([]);
+  const [quantity, setQuantity] = useState(0);
 
+  const cartQuantity = cart.reduce((acc, cur) => acc + cur.qty, 0);
+  
   return (
     <>
       <BrowserRouter>
-        <Navigation item={item} setShowModal={setShowModal} />
+        <Navigation cartQuantity={cartQuantity} setShowModal={setShowModal} />
         <Routes>
           <Route path="/shopping-cart" element={<Home />} />
           <Route path="/shopping-cart/products" element={<Shop />} />
@@ -23,12 +25,12 @@ function App() {
             path="/shopping-cart/products/:productId"
             element={
               <Plant
-                item={item}
-                setItem={setItem}
                 showModal={showModal}
                 setShowModal={setShowModal}
                 cart={cart}
                 setCart={setCart}
+                quantity={quantity}
+                setQuantity={setQuantity}
               />
             }
           />
@@ -36,9 +38,9 @@ function App() {
         <Cart
           showModal={showModal}
           onClose={() => setShowModal(false)}
-          item={item}
           cart={cart}
           setCart={setCart}
+          cartQuantity={cartQuantity}
         />
       </BrowserRouter>
     </>

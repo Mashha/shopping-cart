@@ -3,7 +3,7 @@ import "./navigation.css";
 import { Link } from "react-router-dom";
 import logo4 from "../../images/logo4.png";
 
-function Navigation({ item, setShowModal }) {
+function Navigation({ cartQuantity, setShowModal }) {
   return (
     <header>
       <nav>
@@ -23,7 +23,7 @@ function Navigation({ item, setShowModal }) {
           </li>
           <button className="nav-cart" onClick={() => setShowModal(true)}>
             <i className="fa-solid fa-cart-shopping"></i>
-            <span className="items-number">{item}</span>
+            <span className="items-number">{cartQuantity}</span>
           </button>
         </ul>
       </nav>

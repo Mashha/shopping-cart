@@ -17,6 +17,7 @@ export const smallPlants = [
       money_tree,
       money_tree_close
     ],
+    qty: 1
   },
   {
     name: "Philodendron Birkin",
@@ -30,6 +31,7 @@ export const smallPlants = [
         philodendron,
         zzPlant
       ],
+      qty: 1
   },
   {
     name: "Calathea Rattlesnake",
@@ -43,6 +45,7 @@ export const smallPlants = [
         philodendron,
         zzPlant
       ],
+      qty: 1
   },
   {
     name: "ZZ Plant",
@@ -56,5 +59,6 @@ export const smallPlants = [
         philodendron,
         zzPlant
       ],
+      qyt: 1
   },
 ];
