@@ -6,7 +6,7 @@ import formatCurrency from "../../utils/formatCurrency";
 
 import "./plant.css";
 
-function Plant({ setShowModal, cart, setCart, quantity, setQuantity }) {
+function Plant({ setShowModal, cart, setCart }) {
   const [plant, setPlant] = useState(null);
   const [showPlant, setShowPlant] = useState("");
   const params = useParams();

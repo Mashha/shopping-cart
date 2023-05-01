@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./navigation.css";
 import { Link } from "react-router-dom";
 import logo4 from "../../images/logo4.png";

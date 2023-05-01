@@ -1,15 +1,12 @@
 import "./cart.css";
 import formatCurrency from "../../utils/formatCurrency";
-import { useState } from "react";
 
-function Cart({ showModal, onClose, cart, setCart, total, cartQuantity }) {
+function Cart({ showModal, onClose, cart, setCart, cartQuantity }) {
   if (!showModal) {
     return null;
   }
 
 
-
-  console.log(cart);
   return (
     <div className="shopping-cart-modal">
       <div className="shopping-cart-modal-inner">
@@ -32,9 +29,9 @@ function Cart({ showModal, onClose, cart, setCart, total, cartQuantity }) {
                   <h3>{formatCurrency(item.price)}</h3>
                   <div className="cart-data-bottom">
                     <div className="multiple-items">
-                      <button>-</button>
+                      <button onClick={decrease}>-</button>
                       <span>{item.qty}</span>
-                      <button>+</button>
+                      <button onClick={increase}>+</button>
                     </div>
                     <button className="remove-cart-item">Remove</button>
                   </div>
@@ -47,7 +44,7 @@ function Cart({ showModal, onClose, cart, setCart, total, cartQuantity }) {
         </div>
         <div className="shop-checkout">
           <div>
-            <h3>Subtotal: {total}</h3>
+            <h3>Subtotal: total</h3>
           </div>
           <button>Checkout</button>
         </div>
