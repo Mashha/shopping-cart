@@ -7,31 +7,29 @@ function Cart({ showModal, onClose, cart, setCart, cartQuantity, cartTotal }) {
     return null;
   }
 
-  // function increase(e) {
-  //   console.log(e.target)
+  function increase(e) {
+    setCart(
+      cart.map((item) => {
+        if (item.id === e.target.parentElement.id) {
+          return { ...item, qty: item.qty + 1 };
+        }
+        return item;
+      })
+    );
+  }
 
-  //     cart.map((item) => {
-  //       console.log(item.qyt);
-  //       // if (item.id === e.target.parentElement.id) {
-  //       //   return { ...item, qty: item.qty + 1 };
-  //       // }
-  //       // return item;
-  //     }
-  //   );
-  // }
-  // function decrease(e) {
-  //   if (cart.length > 0) {
-  //     setCart(
-  //       cart.map((item) => {
-  //         if (item.id === e.target.parentElement.id && item.qty > 1) {
-  //           return { ...item, qty: item.qty - 1 };
-  //         }
-  //           return item;
-
-  //       })
-  //     );
-  //   }
-  //}
+  function decrease(e) {
+    if (cart.length > 0) {
+      setCart(
+        cart.map((item) => {
+          if (item.id === e.target.parentElement.id && item.qty > 1) {
+            return { ...item, qty: item.qty - 1 };
+          }
+          return item;
+        })
+      );
+    }
+  }
 
   return (
     <div className="shopping-cart-modal">
@@ -54,10 +52,10 @@ function Cart({ showModal, onClose, cart, setCart, cartQuantity, cartTotal }) {
                   <p>{item.size}</p>
                   <h3>{formatCurrency(item.price)}</h3>
                   <div className="cart-data-bottom">
-                    <div className="multiple-items">
-                      <button>-</button>
+                    <div className="multiple-items" id={item.id}>
+                      <button onClick={(e) => decrease(e)}>-</button>
                       <span>{item.qty}</span>
-                      <button>+</button>
+                      <button onClick={(e) => increase(e)}>+</button>
                     </div>
                     <button className="remove-cart-item">Remove</button>
                   </div>

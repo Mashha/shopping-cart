@@ -9,7 +9,7 @@ import Cart from "./components/cart/Cart";
 
 function App() {
   const [showModal, setShowModal] = useState(false);
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(JSON.parse(localStorage.getItem("cart")) || []);
 
   const cartQuantity = cart.reduce((total, current) => total + current.qty, 0);
 

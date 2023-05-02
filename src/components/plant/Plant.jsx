@@ -22,6 +22,7 @@ function Plant({ setShowModal, cart, setCart }) {
 
   function changeImage(e) {
     setShowPlant(e.target);
+   
   }
 
   function addItemToCart() {
@@ -43,10 +44,8 @@ function Plant({ setShowModal, cart, setCart }) {
     if (!isInCart) {
       setCart([...cart, plant]);
     }
-    //localStorage.setItem("plant", JSON.stringify(plant))
+    //localStorage.setItem("plant", JSON.stringify(cart))
   }
-
-
 
   return (
     <>
