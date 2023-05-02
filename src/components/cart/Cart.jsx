@@ -1,11 +1,36 @@
 import "./cart.css";
 import formatCurrency from "../../utils/formatCurrency";
 
-function Cart({ showModal, onClose, cart, setCart, cartQuantity }) {
+function Cart({ showModal, onClose, cart, setCart }) {
   if (!showModal) {
     return null;
   }
 
+  // function increase(e) {
+  //   console.log(e.target)
+
+  //     cart.map((item) => {
+  //       console.log(item.qyt);
+  //       // if (item.id === e.target.parentElement.id) {
+  //       //   return { ...item, qty: item.qty + 1 };
+  //       // }
+  //       // return item;
+  //     }
+  //   );
+  // }
+  // function decrease(e) {
+  //   if (cart.length > 0) {
+  //     setCart(
+  //       cart.map((item) => {
+  //         if (item.id === e.target.parentElement.id && item.qty > 1) {
+  //           return { ...item, qty: item.qty - 1 };
+  //         }
+  //           return item;
+
+  //       })
+  //     );
+  //   }
+  //}
 
   return (
     <div className="shopping-cart-modal">
@@ -14,7 +39,7 @@ function Cart({ showModal, onClose, cart, setCart, cartQuantity }) {
           <i className="fa-solid fa-xmark"></i>
         </span>
         <div>
-          Your cart <span>({cartQuantity})</span>
+          Your cart <span>()</span>
         </div>
         <div className="shop-items">
           {cart ? (
@@ -29,9 +54,9 @@ function Cart({ showModal, onClose, cart, setCart, cartQuantity }) {
                   <h3>{formatCurrency(item.price)}</h3>
                   <div className="cart-data-bottom">
                     <div className="multiple-items">
-                      <button onClick={decrease}>-</button>
+                      <button>-</button>
                       <span>{item.qty}</span>
-                      <button onClick={increase}>+</button>
+                      <button>+</button>
                     </div>
                     <button className="remove-cart-item">Remove</button>
                   </div>

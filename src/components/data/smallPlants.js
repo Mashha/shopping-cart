@@ -65,7 +65,7 @@ export const smallPlants = [
       "The ZZ Plant is characterized by its waxy green leaves above the surface of its potting mix, and its large potato-like rhizomes underneath. These rhizomes store water, making the ZZ a hardy, drought-tolerant houseplant that only needs water every few weeks.",
     size: "small",
     gallery: [zzPlant, zz_close],
-    qyt: 1,
+    qty: 1,
     petFriendly: false,
   },
   {
@@ -77,7 +77,7 @@ export const smallPlants = [
       "The Ficus Elastica, or rubber tree, is known for its thick, glossy leaves and latex sap that was once used in rubber production! This same sap makes the Ficus elastica toxic, so the best practice is to keep it out of the reach of curious pets and small children. Give your Rubber tree plenty of bright indirect light to help it retain its dramatic foliage.",
     size: "small",
     gallery: [rubber_tree, rubber_tree_close],
-    qyt: 1,
+    qty: 1,
     petFriendly: false,
   },
   {
@@ -89,7 +89,7 @@ export const smallPlants = [
       "The Parlor Palm is a favorite easy-care palm with tropical fronds known for its air-purifying qualities.",
     size: "small",
     gallery: [parlor, parlor_palm_close],
-    qyt: 1,
+    qty: 1,
     petFriendly: true,
   },
   {
@@ -101,7 +101,7 @@ export const smallPlants = [
       "The Spider Plant's easy-going nature and green and white striped foliage make it one of the most popular houseplants around. It gets its name from the baby plants, or spiderettes, that dangle down from a mature mother plant like spiders on a web. Despite its creepy-crawly name, the Spider Plant is a lush, easy-care pick perfect for bringing life to your space.",
     size: "small",
     gallery: [spider_plant, spider_plant_close],
-    qyt: 1,
+    qty: 1,
     petFriendly: true,
   },
   {
@@ -113,7 +113,7 @@ export const smallPlants = [
       "The Ponytail Palm is drought tolerant, slow-growing, and requires very little care. This plant is ideal for people with very little time or who travel regularly. The Ponytail Palm will be perfectly happy being watered every couple of weeks and left alone to soak up the sunlight. This distinct plant brings a little fun to any room in your home.",
     size: "small",
     gallery: [ponytail, ponytail_close],
-    qyt: 1,
+    qty: 1,
     petFriendly: true,
   },
   {
@@ -125,7 +125,7 @@ export const smallPlants = [
       "The Snake Plant Laurentii, or Sansevieria trifasciata 'Laurentii', is a succulent plant characterized by its upright sword-like leaves with vibrant yellow edges. It is popular for its incredibly easy-going nature (it can tolerate low light and drought) and its air-purifying capabilities. The easiest way to kill this plant is to overcare for it.",
     size: "small",
     gallery: [snake_plant, snake_plant_close],
-    qyt: 1,
+    qty: 1,
     petFriendly: false,
   },
   {
@@ -137,7 +137,7 @@ export const smallPlants = [
       "Tradescantia Zebrina is a fast-growing trailing plant that gets its name from the colorful zebra-striped leaves. The vibrant colors on this Tradescantia make it a perfect accent to any collection looking for a pop of color.",
     size: "small",
     gallery: [zebrina, zebrina_close],
-    qyt: 1,
+    qty: 1,
     petFriendly: false,
   },
 ];

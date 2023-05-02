@@ -34,17 +34,19 @@ function Plant({ setShowModal, cart, setCart }) {
           if (item.name === plant.name) {
             isInCart = true;
             return { ...item, qty: item.qty + 1 };
+          } else {
+            return item
           }
-          return item;
         })
       );
     }
     if (!isInCart) {
       setCart([...cart, plant]);
     }
-
     //localStorage.setItem("plant", JSON.stringify(plant))
   }
+
+
 
   return (
     <>

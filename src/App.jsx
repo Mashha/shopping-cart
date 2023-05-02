@@ -10,13 +10,20 @@ import Cart from "./components/cart/Cart";
 function App() {
   const [showModal, setShowModal] = useState(false);
   const [cart, setCart] = useState([]);
+  
+// const cartQuantity = (totalQty, currentQty) => {
+//   console.log(totalQty)
+//   console.log(currentQty)
 
-  const cartQuantity = cart.reduce((acc, cur) => acc + cur.qty, 0);
+//   return totalQty + currentQty
+// }
+// cart.reduce(cartQuantity, 0)
+ 
 
   return (
     <>
       <BrowserRouter>
-        <Navigation cartQuantity={cartQuantity} setShowModal={setShowModal} />
+        <Navigation   setShowModal={setShowModal} />
         <Routes>
           <Route path="/shopping-cart" element={<Home />} />
           <Route path="/shopping-cart/products" element={<Shop />} />
@@ -37,7 +44,7 @@ function App() {
           onClose={() => setShowModal(false)}
           cart={cart}
           setCart={setCart}
-          cartQuantity={cartQuantity}
+          
         />
       </BrowserRouter>
     </>
