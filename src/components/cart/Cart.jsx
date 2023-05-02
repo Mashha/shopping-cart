@@ -1,7 +1,8 @@
 import "./cart.css";
 import formatCurrency from "../../utils/formatCurrency";
+import { useState } from "react";
 
-function Cart({ showModal, onClose, cart, setCart, cartQuantity }) {
+function Cart({ showModal, onClose, cart, setCart, cartQuantity, cartTotal }) {
   if (!showModal) {
     return null;
   }
@@ -69,7 +70,7 @@ function Cart({ showModal, onClose, cart, setCart, cartQuantity }) {
         </div>
         <div className="shop-checkout">
           <div>
-            <h3>Subtotal: total</h3>
+            <h3>Subtotal: {formatCurrency(cartTotal)}</h3>
           </div>
           <button>Checkout</button>
         </div>

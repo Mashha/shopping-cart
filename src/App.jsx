@@ -13,6 +13,10 @@ function App() {
 
   const cartQuantity = cart.reduce((total, current) => total + current.qty, 0);
 
+  const cartTotal = cart
+    .map((item) => item.price * item.qty)
+    .reduce((prevItem, currentItem) => prevItem + currentItem, 0);
+
   return (
     <>
       <BrowserRouter>
@@ -38,6 +42,7 @@ function App() {
           cart={cart}
           setCart={setCart}
           cartQuantity={cartQuantity}
+          cartTotal={cartTotal}
         />
       </BrowserRouter>
     </>
