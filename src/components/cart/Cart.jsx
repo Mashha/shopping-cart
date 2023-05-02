@@ -1,7 +1,7 @@
 import "./cart.css";
 import formatCurrency from "../../utils/formatCurrency";
 
-function Cart({ showModal, onClose, cart, setCart }) {
+function Cart({ showModal, onClose, cart, setCart, cartQuantity }) {
   if (!showModal) {
     return null;
   }
@@ -39,7 +39,7 @@ function Cart({ showModal, onClose, cart, setCart }) {
           <i className="fa-solid fa-xmark"></i>
         </span>
         <div>
-          Your cart <span>()</span>
+          Your cart <span>({cartQuantity})</span>
         </div>
         <div className="shop-items">
           {cart ? (
