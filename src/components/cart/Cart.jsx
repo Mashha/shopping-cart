@@ -31,6 +31,10 @@ function Cart({ showModal, onClose, cart, setCart, cartQuantity, cartTotal }) {
     }
   }
 
+  function removePlant(e) {
+    setCart(cart.filter((plant) => plant.id !== e.target.id));
+  }
+
   return (
     <div className="shopping-cart-modal">
       <div className="shopping-cart-modal-inner">
@@ -57,7 +61,13 @@ function Cart({ showModal, onClose, cart, setCart, cartQuantity, cartTotal }) {
                       <span>{item.qty}</span>
                       <button onClick={(e) => increase(e)}>+</button>
                     </div>
-                    <button className="remove-cart-item">Remove</button>
+                    <button
+                      className="remove-cart-item"
+                      onClick={(e) => removePlant(e)}
+                      id={item.id}
+                    >
+                      Remove
+                    </button>
                   </div>
                 </div>
               </div>
