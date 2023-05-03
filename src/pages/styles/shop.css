@@ -24,3 +24,7 @@ main {
 .categories ul {
   list-style: none;
 }
+
+.shop-title {
+  text-transform: capitalize;
+}

@@ -13,7 +13,9 @@ function Shop() {
 
   return (
     <>
-      <h1>Indoor Plants</h1>
+      <h1 className="shop-title">
+        {categoryId ? categoryId + " " + "plants" : "Indoor plants"}
+      </h1>
       <main>
         <div className="categories">
           <h3>Plant size</h3>
