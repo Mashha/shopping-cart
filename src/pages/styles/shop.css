@@ -1,3 +1,16 @@
+h1 {
+  text-align: center;
+  border-bottom: 1px solid black;
+  margin: 10px 0;
+}
+
+main {
+  display: grid;
+  width: 90%;
+  margin: 30px auto;
+  grid-template-columns: auto 1fr;
+}
+
 .container {
   width: 90%;
   min-height: 100vh;
@@ -6,4 +19,8 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 10px;
   justify-items: center;
+}
+
+.categories ul {
+  list-style: none;
 }

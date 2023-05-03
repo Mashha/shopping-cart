@@ -7,6 +7,7 @@ import Navigation from "./components/nav/Navigation";
 import Plant from "./components/plant/Plant";
 import Cart from "./components/cart/Cart";
 
+
 function App() {
   const [showModal, setShowModal] = useState(false);
   const [cart, setCart] = useState(JSON.parse(localStorage.getItem("cart")) || []);
