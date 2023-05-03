@@ -1,4 +1,5 @@
 import { smallPlants } from "./smallPlants";
-import { mediumPlants } from "./mediumPlanty";
+import { mediumPlants } from "./mediumPlants";
+import { largePlants } from "./largePlants";
 
-export const allProducts = [...smallPlants, ...mediumPlants];
+export const allProducts = [...smallPlants, ...mediumPlants, ...largePlants];
