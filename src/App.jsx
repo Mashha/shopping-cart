@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import Home from "./pages/Home";
 import Shop from "./pages/Shop";
@@ -7,16 +7,21 @@ import Navigation from "./components/nav/Navigation";
 import Plant from "./components/plant/Plant";
 import Cart from "./components/cart/Cart";
 
+const cartFromLocalStorage = JSON.parse(localStorage.getItem("cart") || "[]");
 
 function App() {
   const [showModal, setShowModal] = useState(false);
-  const [cart, setCart] = useState(JSON.parse(localStorage.getItem("cart")) || []);
+  const [cart, setCart] = useState(cartFromLocalStorage);
 
   const cartQuantity = cart.reduce((total, current) => total + current.qty, 0);
 
   const cartTotal = cart
     .map((item) => item.price * item.qty)
     .reduce((prevItem, currentItem) => prevItem + currentItem, 0);
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
 
   return (
     <>
