@@ -27,6 +27,9 @@
   align-self: end;
   font-size: 22px;
   cursor: pointer;
+  position: absolute;
+  top: 22px;
+  right: 22px;
 }
 
 .shop-items {
