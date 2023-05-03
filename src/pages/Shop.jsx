@@ -19,14 +19,16 @@ function Shop() {
       <main>
         <div className="categories">
           <h3>Plant size</h3>
-          {categories.map((category) => (
-            <button
-              onClick={(e) => setCategoryId(e.target.textContent)}
-              className="category-btn"
-            >
-              {category.id}
-            </button>
-          ))}
+          <div className="buttons">
+            {categories.map((category) => (
+              <button
+                onClick={(e) => setCategoryId(e.target.textContent)}
+                className="category-btn"
+              >
+                {category.id}
+              </button>
+            ))}
+          </div>
         </div>
         <div className="container">
           {sortByCategory.map((plant, index) => (

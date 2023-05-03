@@ -7,11 +7,6 @@
 
 .card-image a img {
   width: 100%;
-  transition: transform 0.5s ease;
-}
-
-.card-image:hover img {
-  transform: scale(1.5);
 }
 
 .pet-friendly {
@@ -27,4 +22,14 @@
   height: 25px;
   color: white;
   font-size: 13px;
+}
+
+@media (min-width: 800px) {
+  .card-image a img {
+    transition: transform 0.5s ease;
+  }
+
+  .card-image:hover img {
+    transform: scale(1.5);
+  }
 }

@@ -53,16 +53,13 @@ function Plant({ setShowModal, cart, setCart }) {
         <main className="main-plant">
           <div className="main-left">
             <div className="small-images">
-              <div className="image one">
-                <Link onClick={(e) => changeImage(e)}>
-                  <img src={plant.gallery[0]} alt="" />
-                </Link>
-              </div>
-              <div className="image two">
-                <Link onClick={(e) => changeImage(e)}>
-                  <img src={plant.gallery[1]} alt="" />
-                </Link>
-              </div>
+              {plant.gallery.map(plant => (
+                 <div className="image">
+                 <Link onClick={(e) => changeImage(e)}>
+                   <img src={plant} alt="" />
+                 </Link>
+               </div>
+              ))}
             </div>
             <div className="main-image">
               <img

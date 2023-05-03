@@ -1,10 +1,9 @@
 .main-plant {
-  width: 80%;
-  margin: 50px auto 0;
+  margin: 50px 0;
   height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 50px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 
 .main-right {
@@ -12,6 +11,7 @@
   flex-direction: column;
   gap: 30px;
   max-width: 500px;
+  margin: 0 15px;
 }
 
 .main-right .name_price {
@@ -23,16 +23,16 @@
 }
 
 .main-right h1 {
-  font-size: 40px;
+  font-size: 25px;
 }
 
 .main-right h3 {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 400;
 }
 
 .main-right div {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500px;
 }
 .main-right div p {
@@ -53,19 +53,48 @@
 
 .main-left {
   display: grid;
-  grid-template-columns: auto 1fr;
-  grid-gap: 15px
+  grid-template-rows: auto 1fr;
+  grid-gap: 15px;
+}
+
+.main-image {
+  display: none;
 }
 
 .main-image img {
   width: 100%;
 }
 
-.small-images .image{
-   width: 100px;
+.small-images {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.small-images .image {
+  width: 340px;
+  flex: 0 0 auto;
 }
 
 .small-images .image img {
   width: 100%;
 }
 
+@media (min-width: 420px) {
+  .main-plant {
+    margin: 50px 25px;
+  }
+  .small-images .image {
+    width: 100px;
+  }
+
+  .main-image {
+    display: flex;
+  }
+
+  .main-right {
+    margin: 0;
+  }
+}
