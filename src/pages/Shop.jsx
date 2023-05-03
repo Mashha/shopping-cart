@@ -2,6 +2,7 @@ import { allProducts } from "../components/data/allProducts";
 import Card from "../components/card/Card";
 import "./styles/shop.css";
 import { useState } from "react";
+import { categories } from "../components/data/categories";
 
 function Shop() {
   const [categoryId, setCategoryId] = useState("");
@@ -16,16 +17,14 @@ function Shop() {
       <main>
         <div className="categories">
           <h3>Plant size</h3>
-
-          <button onClick={(e) => setCategoryId(e.target.textContent)}>
-            Small
-          </button>
-          <button onClick={(e) => setCategoryId(e.target.textContent)}>
-            Medium
-          </button>
-          <button onClick={(e) => setCategoryId(e.target.textContent)}>
-            Large
-          </button>
+          {categories.map((category) => (
+            <button
+              onClick={(e) => setCategoryId(e.target.textContent)}
+              className="category-btn"
+            >
+              {category.id}
+            </button>
+          ))}
         </div>
         <div className="container">
           {sortByCategory.map((plant, index) => (
