@@ -35,6 +35,7 @@ function Shop() {
               image={plant.image}
               price={plant.price}
               id={plant.id}
+              petFriendly={plant.petFriendly}
               key={index}
             />
           ))}

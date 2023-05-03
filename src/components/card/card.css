@@ -2,6 +2,7 @@
   max-width: 300px;
   height: 360px;
   overflow: hidden;
+  position: relative;
 }
 
 .card-image a img {
@@ -11,4 +12,19 @@
 
 .card-image:hover img {
   transform: scale(1.5);
+}
+
+.pet-friendly {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  top: 20px;
+  right: 0;
+  background-color: green;
+  width: 100px;
+  height: 25px;
+  color: white;
+  font-size: 13px;
 }
