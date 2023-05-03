@@ -13,21 +13,23 @@ function Shop() {
 
   return (
     <>
-      <h1 className="shop-title">
-        {categoryId ? categoryId + " " + "plants" : "Indoor plants"}
-      </h1>
-      <main>
-        <div className="categories">
-          <h3>Plant size</h3>
-          <div className="buttons">
-            {categories.map((category) => (
-              <button
-                onClick={(e) => setCategoryId(e.target.textContent)}
-                className="category-btn"
-              >
-                {category.id}
-              </button>
-            ))}
+      <main className="main-shop">
+        <div className="main-top">
+          <h1 className="shop-title">
+            {categoryId ? categoryId + " " + "plants" : "Indoor plants"}
+          </h1>
+          <div className="categories">
+            <h3>Plant size</h3>
+            <div className="buttons">
+              {categories.map((category) => (
+                <button
+                  onClick={(e) => setCategoryId(e.target.textContent)}
+                  className="category-btn"
+                >
+                  {category.id}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
         <div className="container">

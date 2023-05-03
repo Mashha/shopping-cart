@@ -94,3 +94,9 @@
   display: flex;
   gap: 10px;
 }
+
+@media (min-width: 670px) {
+  .shopping-cart-modal-inner {
+    width: 40%;
+  }
+}

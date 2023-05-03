@@ -1,4 +1,4 @@
-main {
+.main-shop {
   display: grid;
   margin: 30px 20px;
   grid-template-rows: auto 1fr;
@@ -47,4 +47,27 @@ main {
   text-transform: capitalize;
   text-align: center;
   margin: 10px 0;
+}
+
+.main-top {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media (min-width: 670px) {
+  .main-shop {
+    width: 90%;
+    margin: auto;
+  }
+
+  .main-top {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 40px;
+  }
+
+  .categories h3 {
+    text-align: end;
+  }
 }
