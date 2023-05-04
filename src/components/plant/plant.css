@@ -1,7 +1,7 @@
 .main-plant {
-  margin: 50px 0;
-  height: 100vh;
+  padding: 40px 0;
   display: grid;
+  gap: 30px;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
 }
@@ -85,15 +85,20 @@
 @media (min-width: 670px) {
   .main-plant {
     width: 90%;
-    margin: 50px auto;
+    margin: auto;
     gap: 50px;
+    height: calc(100vh - 70px);
   }
   .small-images .image {
     width: 100px;
   }
 
-  .main-image {
+  .main-image  {
     display: flex;
+  }
+
+  .main-image img {
+    display: block;
   }
 
   .main-right {
@@ -119,6 +124,8 @@
     grid-template-columns: auto 1fr;
     grid-gap: 15px;
   }
+
+ 
   .main-right {
     grid-row: 1;
     grid-column: 2/3;
