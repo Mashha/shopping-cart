@@ -9,6 +9,7 @@ function Navigation({ cartQuantity, setShowModal }) {
   function handleClick() {
     setShowNav(!showNav);
   }
+
   return (
     <header>
       <nav>
@@ -18,13 +19,22 @@ function Navigation({ cartQuantity, setShowModal }) {
         </div>
         <ul className={showNav ? "nav-items show" : "nav-items"}>
           <li>
-            <Link to="/shopping-cart">Home</Link>
+            <Link to="/shopping-cart" onClick={() => setShowNav(false)}>
+              Home
+            </Link>
           </li>
           <li>
-            <Link to="/shopping-cart/products">Shop</Link>
+            <Link
+              to="/shopping-cart/products"
+              onClick={() => setShowNav(false)}
+            >
+              Shop
+            </Link>
           </li>
           <li>
-            <Link to="#">Contact</Link>
+            <Link to="#" onClick={() => setShowNav(false)}>
+              Contact
+            </Link>
           </li>
         </ul>
         <button className="nav-cart" onClick={() => setShowModal(true)}>
