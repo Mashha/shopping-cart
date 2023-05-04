@@ -34,7 +34,7 @@ function Navigation({ cartQuantity, setShowModal }) {
             </Link>
           </li>
           <li>
-            <Link to="#" onClick={() => setShowNav(false)}>
+            <Link to="/shopping-cart/contact" onClick={() => setShowNav(false)}>
               Contact
             </Link>
           </li>
