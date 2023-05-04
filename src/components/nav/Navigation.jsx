@@ -14,8 +14,10 @@ function Navigation({ cartQuantity, setShowModal }) {
     <header>
       <nav>
         <div className="logo">
-          <img src={logo4} alt="" />
-          <h1>Botanic</h1>
+          <Link to="/shopping-cart">
+            <img src={logo4} alt="" />
+            <h1>Botanic</h1>
+          </Link>
         </div>
         <ul className={showNav ? "nav-items show" : "nav-items"}>
           <li>

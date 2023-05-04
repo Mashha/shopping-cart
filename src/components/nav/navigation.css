@@ -11,7 +11,7 @@ header {
 
 nav {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: auto 1fr auto;
   grid-template-areas: "menu logo cart";
   align-items: center;
   width: 100%;
@@ -20,10 +20,15 @@ nav {
 }
 
 .logo {
+  grid-area: logo;
+  justify-self: center;
+}
+
+.logo a {
+  text-decoration: none;
   display: flex;
   align-items: center;
   gap: 10px;
-  grid-area: logo;
 }
 
 .logo img {
@@ -34,6 +39,8 @@ nav {
   color: rgba(0, 0, 0, 0.56);
   position: relative;
   font-family: "indie flower", sans-serif;
+  font-size: 22px;
+  align-self: end;
 }
 
 .logo h1:after {
@@ -132,5 +139,13 @@ nav {
     margin: auto;
     grid-template-areas: "logo menu cart";
     grid-template-columns: auto 1fr auto;
+  }
+
+  .logo img {
+    width: 70px;
+  }
+
+  .logo h1 {
+    font-size: 25px;
   }
 }
