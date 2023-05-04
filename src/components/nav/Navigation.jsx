@@ -1,6 +1,6 @@
 import "./navigation.css";
 import { Link } from "react-router-dom";
-import logo4 from "../../images/logo4.png";
+import logo from "../../images/logo4.png";
 import { useState } from "react";
 
 function Navigation({ cartQuantity, setShowModal }) {
@@ -15,7 +15,7 @@ function Navigation({ cartQuantity, setShowModal }) {
       <nav>
         <div className="logo">
           <Link to="/shopping-cart">
-            <img src={logo4} alt="" />
+            <img src={logo} alt="" />
             <h1>Botanic</h1>
           </Link>
         </div>
