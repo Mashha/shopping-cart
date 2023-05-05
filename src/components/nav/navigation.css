@@ -6,7 +6,6 @@ header {
   height: 70px;
   display: flex;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
-  /* background: linear-gradient(to right, white 0%, white 50%, rgba(82, 122, 72, 0.53) 50%, rgba(82, 122, 72, 0.53) 100%); */
 }
 
 nav {
@@ -75,6 +74,9 @@ nav {
   padding: 100px 15px;
   gap: 50px;
   display: none;
+  font-family: var(--text-font);
+  font-weight: 400;
+  letter-spacing: 1px;
 }
 
 .nav-items li a {
@@ -134,9 +136,7 @@ nav {
   }
 
   nav {
-    padding: 0;
-    width: 90%;
-    margin: auto;
+    padding: 0 30px;
     grid-template-areas: "logo menu cart";
     grid-template-columns: auto 1fr auto;
   }
