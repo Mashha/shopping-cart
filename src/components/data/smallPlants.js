@@ -31,6 +31,7 @@ export const smallPlants = [
     gallery: [money_tree, money_tree_close],
     qty: 1,
     petFriendly: true,
+    bestSeller: true
   },
   {
     name: "Philodendron Green",
@@ -67,6 +68,7 @@ export const smallPlants = [
     gallery: [zzPlant, zz_close],
     qty: 1,
     petFriendly: false,
+    bestSeller: true
   },
   {
     name: "Rubber Tree",

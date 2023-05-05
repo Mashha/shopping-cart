@@ -55,6 +55,7 @@ export const largePlants = [
     gallery: [bamboo_palm, bamboo_palm_close],
     qty: 1,
     petFriendly: true,
+    bestSeller: true
   },
   {
     name: "Fiddle Leaf Fig",
@@ -127,6 +128,7 @@ export const largePlants = [
     gallery: [chinese_palm, chinese_palm_close],
     qty: 1,
     petFriendly: true,
+    bestSeller: true
   },
   {
     name: "Money Tree Stump",

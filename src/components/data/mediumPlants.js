@@ -55,6 +55,7 @@ export const mediumPlants = [
     gallery: [white_orchid, white_orchid_close],
     qty: 1,
     petFriendly: true,
+    bestSeller: true
   },
   {
     name: "Bromeliad Aechmea Pink",
@@ -127,6 +128,7 @@ export const mediumPlants = [
     gallery: [monstera, monstera_close],
     qty: 1,
     petFriendly: false,
+    bestSeller: true
   },
   {
     name: "Blue Star Fern",
