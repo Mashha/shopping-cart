@@ -10,7 +10,7 @@ function Cart({ showModal, onClose, cart, setCart, cartQuantity, cartTotal }) {
   function increase(e) {
     setCart(
       cart.map((item) => {
-        if (item.id === e.target.parentElement.id) {
+        if (item.id === e.target.parentElement.parentElement.id) {
           return { ...item, qty: item.qty + 1 };
         }
         return item;
@@ -22,7 +22,10 @@ function Cart({ showModal, onClose, cart, setCart, cartQuantity, cartTotal }) {
     if (cart.length > 0) {
       setCart(
         cart.map((item) => {
-          if (item.id === e.target.parentElement.id && item.qty > 1) {
+          if (
+            item.id === e.target.parentElement.parentElement.id &&
+            item.qty > 1
+          ) {
             return { ...item, qty: item.qty - 1 };
           }
           return item;
@@ -41,7 +44,7 @@ function Cart({ showModal, onClose, cart, setCart, cartQuantity, cartTotal }) {
         <span className="btn-close" onClick={onClose}>
           <i className="fa-solid fa-xmark"></i>
         </span>
-        <div>
+        <div className="cart-quantity">
           Your cart <span>({cartQuantity})</span>
         </div>
         <div className="shop-items">
@@ -57,9 +60,13 @@ function Cart({ showModal, onClose, cart, setCart, cartQuantity, cartTotal }) {
                   <h3>{formatCurrency(item.price)}</h3>
                   <div className="cart-data-bottom">
                     <div className="multiple-items" id={item.id}>
-                      <button onClick={(e) => decrease(e)}>-</button>
+                      <button onClick={(e) => decrease(e)}>
+                        <i class="fa-solid fa-minus"></i>
+                      </button>
                       <span>{item.qty}</span>
-                      <button onClick={(e) => increase(e)}>+</button>
+                      <button onClick={(e) => increase(e)}>
+                        <i className="fa-solid fa-plus"></i>
+                      </button>
                     </div>
                     <button
                       className="remove-cart-item"
