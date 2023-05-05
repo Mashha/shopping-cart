@@ -1,0 +1,30 @@
+.home-section-one-inner {
+  display: grid;
+  grid-gap: 20px;
+  justify-items: center;
+  margin: 30px 15px;
+}
+
+.home-section-one-inner .icons {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  font-family: var(--text-font);
+  padding: 5px;
+}
+
+.home-section-one-inner .icons img {
+  width: 100px;
+}
+
+@media (min-width: 600px) {
+  .home-section-one-inner {
+    width: 90%;
+    margin: 100px auto;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
