@@ -1,8 +1,8 @@
-import "./homeSection.css";
+import "./homeSectionTwo.css";
 import { allProducts } from "../data/allProducts";
 import Card from "../card/Card";
 
-function HomeSection() {
+function HomeSectionTwo() {
   const filteredPlants = allProducts.filter((plant) => plant.bestSeller);
 
   return (
@@ -24,4 +24,4 @@ function HomeSection() {
   );
 }
 
-export default HomeSection;
+export default HomeSectionTwo;
