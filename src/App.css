@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap");
+
 *,
 *::after,
 *::before {
@@ -6,4 +8,14 @@
   box-sizing: border-box;
   min-height: 0;
   min-width: 0;
+}
+
+body {
+  background-color: #fffdfa;
+}
+
+:root {
+  --green-light: #40b93c;
+  --green-dark: #1f6534;
+  --text-font: "Montserrat", sans-serif;
 }

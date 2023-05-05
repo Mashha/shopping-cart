@@ -6,7 +6,7 @@ import Shop from "./pages/Shop";
 import Navigation from "./components/nav/Navigation";
 import Plant from "./components/plant/Plant";
 import Cart from "./components/cart/Cart";
-import Footer from "./components/footer/Footer";
+// import Footer from "./components/footer/Footer";
 import Contact from "./components/contact/Contact";
 
 const cartFromLocalStorage = JSON.parse(localStorage.getItem("cart") || "[]");
@@ -53,7 +53,6 @@ function App() {
           cartQuantity={cartQuantity}
           cartTotal={cartTotal}
         />
-        <Footer />
       </BrowserRouter>
     </>
   );

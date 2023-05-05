@@ -45,6 +45,7 @@ function Shop() {
           ))}
         </div>
       </main>
+      {/* <Footer /> */}
     </>
   );
 }
