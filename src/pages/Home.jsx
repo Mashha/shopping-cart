@@ -1,4 +1,5 @@
 import Hero from "../components/hero/Hero";
+import HomeSectionThree from "../components/home-section-three/HomeSectionThree";
 import HomeSectionTwo from "../components/home-section-two/HomeSectionTwo";
 
 function Home() {
@@ -6,6 +7,7 @@ function Home() {
   <>
   <Hero />
   <HomeSectionTwo />
+  <HomeSectionThree />
   </>);
 }
 
