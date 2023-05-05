@@ -3,6 +3,7 @@ import Card from "../components/card/Card";
 import "./styles/shop.css";
 import { useState } from "react";
 import { categories } from "../components/data/categories";
+import Footer from "../components/footer/Footer";
 
 function Shop() {
   const [categoryId, setCategoryId] = useState("");
@@ -45,7 +46,7 @@ function Shop() {
           ))}
         </div>
       </main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
