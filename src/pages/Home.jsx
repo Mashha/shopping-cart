@@ -3,6 +3,7 @@ import HomeSectionOne from "../components/home-section-one/HomeSectionOne";
 import HomeSectionThree from "../components/home-section-three/HomeSectionThree";
 import HomeSectionTwo from "../components/home-section-two/HomeSectionTwo";
 import Footer from "../components/footer/Footer";
+import HomeSectionFour from "../components/home-section-four/HomeSectionFour";
 
 function Home() {
   return (
@@ -11,6 +12,7 @@ function Home() {
       <HomeSectionOne />
       <HomeSectionTwo />
       <HomeSectionThree />
+      <HomeSectionFour />
       <Footer />
     </>
   );

@@ -1,0 +1,48 @@
+.home-section-four {
+  margin-bottom: 50px;
+}
+
+.home-section-four-inner {
+  margin: 0 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  padding: 20px 0;
+}
+
+.home-section-four-left img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+}
+
+.home-section-four-right {
+  font-family: var(--text-font);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.home-section-four-right button {
+  font-family: var(--text-font);
+  border: none;
+  background-color: var(--green-dark);
+  padding: 8px 20px;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 0.7px;
+}
+@media (min-width: 1000px) {
+  .home-section-four-inner {
+    margin: 0 30px;
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .home-section-four-right {
+    align-items: baseline;
+  }
+}
