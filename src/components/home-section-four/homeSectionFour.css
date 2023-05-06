@@ -33,7 +33,12 @@
   padding: 8px 20px;
   color: white;
   font-weight: 500;
-  letter-spacing: 0.7px;
+  letter-spacing: 1px;
+}
+
+.home-section-four-right h3,
+p {
+  letter-spacing: 0.5px;
 }
 @media (min-width: 1000px) {
   .home-section-four-inner {
