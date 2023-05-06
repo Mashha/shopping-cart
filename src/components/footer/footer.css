@@ -1,5 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Fuggles&display=swap");
+
 footer {
   margin-top: 60px;
+  background-color: var(--green-dark);
+  position: relative;
+}
+
+footer:before {
+  content: attr(data-text);
+  font-size: 60px;
+  padding-left: 0;
+  top: -30px;
+  position: absolute;
+  color: rgba(255, 255, 255, 0.1);
+  font-family: "Archivo Black", sans-serif;
 }
 
 .footer-inner {
@@ -7,25 +21,16 @@ footer {
   margin: 0 auto;
   display: grid;
   grid-gap: 20px;
-  padding: 30px 0;
+  padding: 40px 0 30px 0;
   align-items: center;
+  font-family: var(--text-font);
 }
 
-.logo_social {
+.social {
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
-
-.footer-logo {
-  display: flex;
-  width: 150px;
-  align-items: center;
-  gap: 10px;
-}
-
-.footer-logo img {
-  width: 100%;
+  position: relative;
 }
 
 .social-media {
@@ -48,10 +53,11 @@ footer {
 }
 
 .footer-bottom {
-  border-top: 1px solid lightgrey;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 10px 0;
   width: 90%;
   margin: auto;
+  font-family: var(--text-font);
 }
 
 .services h3,
@@ -67,24 +73,25 @@ footer {
 }
 
 .footer-bottom .fa-solid.fa-heart {
-  color: rgb(213, 2, 2);
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.footer-bottom p a {
+  color: rgba(255, 255, 255, 0.3);
+  text-decoration: none;
 }
 
 @media (min-width: 670px) {
   .footer-inner {
     grid-template-columns: 2fr 1fr;
   }
+  footer::before {
+    font-size: 70px;
+    top: 10px;
+  }
 }
 @media (min-width: 970px) {
   .footer-inner {
     grid-template-columns: 2fr 1fr 1fr 1fr;
-  }
-
-  .social-media {
-    padding-left: 30px;
-  }
-
-  .footer-logo {
-    width: 200px;
   }
 }

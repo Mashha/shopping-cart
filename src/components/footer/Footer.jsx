@@ -5,12 +5,9 @@ import logo from "../../images/logo4.png";
 
 function Footer() {
   return (
-    <footer>
+    <footer data-text="Follow Us">
       <div className="footer-inner">
-        <div className="logo_social">
-          <div className="footer-logo">
-            <img src={logo} alt="" />
-          </div>
+        <div className="social">
           <div className="social-media">
             <i className="fa-brands fa-square-facebook"></i>
             <i className="fa-brands fa-square-instagram"></i>
