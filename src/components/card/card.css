@@ -24,6 +24,18 @@
   font-size: 13px;
 }
 
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0 10px 0;
+}
+
+.details h3,
+.price {
+  font-weight: 400;
+}
+
 @media (min-width: 800px) {
   .card-image a img {
     transition: transform 0.5s ease;
