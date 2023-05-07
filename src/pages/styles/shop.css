@@ -40,7 +40,7 @@
   border-radius: 10px;
   cursor: pointer;
   font-family: var(--text-font);
-  letter-spacing: 0.5px;
+  letter-spacing: 1.5px;
 }
 
 .categories ul {
