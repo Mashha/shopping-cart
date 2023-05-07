@@ -49,7 +49,7 @@ footer:before {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 3px;
+  gap: 7px;
 }
 
 .footer-bottom {
