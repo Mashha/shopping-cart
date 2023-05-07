@@ -3,12 +3,15 @@ import "./contact.css";
 import Footer from "../footer/Footer";
 
 function Contact() {
+  function clickHandler(e) {
+    e.preventDefault();
+  }
   return (
     <>
       <div className="contact">
         <div className="contact-inner">
           <div className="contact-info">
-            <h3>Get In Touch</h3>
+            <h1>Get In Touch</h1>
             <p>
               {" "}
               Our team is full of passionate plant parents ready to help. For
@@ -24,7 +27,7 @@ function Contact() {
               question:
             </p>
 
-            <h4>Order Status Update</h4>
+            <h3>Order Status Update</h3>
             <p>
               Orders with standard shipping ship within 2-6 business days.
               Orders with express shipping ship within 1-2 business days.
@@ -32,7 +35,7 @@ function Contact() {
               details about shipping can be found here.
             </p>
 
-            <h4>30-Day Guarantee</h4>
+            <h3>30-Day Guarantee</h3>
             <p>
               We guarantee your plants will arrive in happy, healthy condition.
               If not, we replace them for free as part of our 30-Day Customer
@@ -40,7 +43,7 @@ function Contact() {
             </p>
           </div>
           <div className="contact-form">
-            <h3>Contact Us</h3>
+            <h2>Contact Us</h2>
             <form action="">
               <label htmlFor="name">Name</label>
               <input type="text" name="name" required />
@@ -55,7 +58,7 @@ function Contact() {
                 cols="30"
                 rows="10"
               ></textarea>
-              <button>Send</button>
+              <button onClick={(e) => clickHandler(e)}>Send</button>
             </form>
           </div>
         </div>

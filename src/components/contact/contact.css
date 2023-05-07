@@ -4,6 +4,7 @@
   display: grid;
   grid-gap: 40px;
   padding: 30px 0;
+  font-family: var(--text-font);
 }
 
 .contact-info {
@@ -12,32 +13,51 @@
   gap: 10px;
 }
 
+.contact-info h1 {
+  letter-spacing: 0.5px;
+}
+
 .contact-info h3 {
-  font-size: 28px;
-}
-
-.contact-info h4 {
   font-size: 20px;
+  letter-spacing: 0.5px;
 }
 
-.contact-form h3 {
-  font-size: 22px;
+.contact-form h2 {
   padding-bottom: 20px;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.contact-info p {
+  letter-spacing: 0.5;
+  line-height: 30px;
 }
 
 form {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  padding: 20px 0;
 }
 
 form input {
-  padding: 5px;
+  padding: 7px;
+  margin-bottom: 5px;
 }
 
 form input,
 textarea {
-  border: 1px solid rgba(128, 128, 128, 0.584);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+form button {
+  background-color: var(--green-dark);
+  border: none;
+  color: white;
+  padding: 7px;
+  font-family: var(--text-font);
+  font-weight: 500;
+  letter-spacing: 1.5px;
 }
 
 @media (min-width: 800px) {
@@ -52,5 +72,6 @@ textarea {
 
   .contact-form {
     max-width: 600px;
+    padding-top: 70px;
   }
 }
