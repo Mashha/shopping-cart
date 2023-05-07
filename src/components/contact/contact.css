@@ -74,4 +74,12 @@ form button {
     max-width: 600px;
     padding-top: 70px;
   }
+
+  form button {
+    transition: all 200ms ease-in;
+  }
+
+  form button:hover {
+    background-color: rgb(39, 133, 67);
+  }
 }

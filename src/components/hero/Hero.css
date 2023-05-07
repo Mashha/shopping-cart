@@ -48,11 +48,11 @@
   color: var(--green-light);
 }
 
-.left button {
+.shop-btn {
   border: none;
   padding: 10px 35px;
   background-color: var(--green-light);
-  border-radius: 5px;
+  position: relative;
 }
 
 .left p {
@@ -100,7 +100,6 @@
 .image-one {
   grid-column: 1/3;
   grid-row: 6 / span 3;
- 
 }
 
 .image-two {
@@ -170,6 +169,26 @@
   .left p {
     width: 60%;
     text-align: left;
+  }
+
+  .shop-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid var(--green-light);
+    z-index: -1;
+    transition: top, left, bottom, right, 100ms ease-in-out;
+  }
+
+  .shop-btn:hover::before,
+  .shop-btn:focus::before {
+    top: calc(2px * -2);
+    left: calc(2px * -2);
+    bottom: calc(2px * -2);
+    right: calc(2px * -2);
   }
 
   .right {

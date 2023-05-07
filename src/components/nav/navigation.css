@@ -150,3 +150,25 @@ nav {
     font-size: 25px;
   }
 }
+
+@media (min-width: 1000px) {
+  .nav-items li {
+    position: relative;
+  }
+  .nav-items li::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--green-light);
+    transform: scaleX(0);
+    transition: transform 300ms ease-in;
+  }
+
+  .nav-items li:hover::before,
+  .nav-items li:focus::before {
+    transform: scaleX(1);
+  }
+}

@@ -14,7 +14,7 @@ function Hero() {
             friendly options. Browse out online store or visit us in one of our
             shops.
           </p>
-          <button>
+          <button className="shop-btn">
             <Link to="/shopping-cart/products">Shop</Link>
           </button>
         </div>

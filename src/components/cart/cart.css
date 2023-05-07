@@ -56,6 +56,8 @@
   font-weight: 500;
   padding: 10px;
   cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 100ms ease-in;
 }
 
 .shop-items {
@@ -129,5 +131,11 @@
 @media (min-width: 1000px) {
   .shopping-cart-modal-inner {
     width: 30%;
+  }
+
+  .shop-checkout button:hover {
+    background-color: transparent;
+    border: 2px solid var(--green-dark);
+    color: black;
   }
 }

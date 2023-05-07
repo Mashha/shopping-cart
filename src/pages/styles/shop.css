@@ -76,3 +76,13 @@
     text-align: end;
   }
 }
+
+@media (min-width: 1000px) {
+  .buttons button {
+    transition: all 200ms ease-in;
+  }
+
+  .buttons button:hover {
+    background-color: rgb(39, 133, 67);
+  }
+}

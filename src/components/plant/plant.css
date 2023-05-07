@@ -98,7 +98,7 @@
     width: 100px;
   }
 
-  .main-image  {
+  .main-image {
     display: flex;
   }
 
@@ -130,10 +130,20 @@
     grid-gap: 15px;
   }
 
- 
   .main-right {
     grid-row: 1;
     grid-column: 2/3;
+  }
+
+  .main-right button {
+    transition: all 200ms ease-in;
+    border: 2px solid transparent;
+  }
+
+  .main-right button:hover {
+    border: 2px solid green;
+    background-color: transparent;
+    color: black;
   }
 
   .small-images {

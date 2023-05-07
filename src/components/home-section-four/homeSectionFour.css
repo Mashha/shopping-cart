@@ -50,4 +50,12 @@ p {
   .home-section-four-right {
     align-items: baseline;
   }
+
+  .home-section-four-right button {
+    transition: all 100ms ease-in;
+  }
+
+  .home-section-four-right button:hover {
+    background-color: rgb(39, 133, 67);
+  }
 }

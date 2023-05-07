@@ -69,6 +69,14 @@
     text-align: left;
     font-family: 30px;
   }
+
+  .home-section-three-inner button {
+    transition: all 100ms ease-in;
+  }
+
+  .home-section-three-inner button:hover {
+    background-color: rgb(39, 133, 67);
+  }
 }
 
 @media (min-width: 1600px) {

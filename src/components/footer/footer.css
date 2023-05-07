@@ -41,6 +41,7 @@ footer:before {
 .social-media i {
   font-size: 24px;
   cursor: pointer;
+  transition: transform 150ms ease-in;
 }
 
 .services ul,
@@ -93,5 +94,9 @@ footer:before {
 @media (min-width: 970px) {
   .footer-inner {
     grid-template-columns: 2fr 1fr 1fr 1fr;
+  }
+
+  .social-media i:hover {
+    transform: scale(1.5);
   }
 }

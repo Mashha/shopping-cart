@@ -19,3 +19,7 @@ body {
   --green-dark: #1f6534;
   --text-font: "Montserrat", sans-serif;
 }
+
+button {
+  cursor: pointer;
+}
