@@ -17,6 +17,10 @@
   padding: 5px;
 }
 
+.home-section-one-inner .icons h4 {
+  letter-spacing: 0.5px;
+}
+
 .home-section-one-inner .icons img {
   width: 100px;
 }
@@ -24,7 +28,7 @@
 @media (min-width: 600px) {
   .home-section-one-inner {
     width: 90%;
-    margin: 100px auto;
+    margin: 120px auto;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }

@@ -76,7 +76,7 @@
 
   @supports (scrollbar-color: red blue) {
     .home-section-inner {
-      scrollbar-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.2);
+      scrollbar-color: rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.1);
       scrollbar-width: thin;
     }
   }

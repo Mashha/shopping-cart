@@ -38,6 +38,8 @@
 }
 .main-right div p {
   font-size: 16px;
+  letter-spacing: 0.5px;
+  line-height: 28px;
 }
 
 .main-right .desc {
