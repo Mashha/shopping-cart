@@ -7,7 +7,7 @@ function HomeSectionTwo() {
 
   return (
     <div className="home-section-two">
-      <h2>Best sellers</h2>
+      <h2>Best Sellers</h2>
       <div className="home-section-inner">
         {filteredPlants.map((plant, index) => (
           <Card

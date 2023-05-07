@@ -30,7 +30,7 @@
 }
 
 .home-section-three-left h2 {
-  font-size: 30px;
+  font-size: 25px;
   text-align: center;
   letter-spacing: 0.5px;
 }
@@ -67,6 +67,7 @@
 
   .home-section-three-inner h2 {
     text-align: left;
+    font-family: 30px;
   }
 }
 
