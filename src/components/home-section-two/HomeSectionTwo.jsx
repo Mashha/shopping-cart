@@ -6,7 +6,7 @@ function HomeSectionTwo() {
   const filteredPlants = allProducts.filter((plant) => plant.bestSeller);
 
   return (
-    <div className="home-section">
+    <div className="home-section-two">
       <h2>Best sellers</h2>
       <div className="home-section-inner">
         {filteredPlants.map((plant, index) => (

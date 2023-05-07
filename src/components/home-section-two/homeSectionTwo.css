@@ -1,10 +1,10 @@
-.home-section {
+.home-section-two {
   margin-top: 60px;
   font-family: var(--text-font);
   font-weight: 400;
 }
 
-.home-section h2 {
+.home-section-two h2 {
   font-size: 30px;
   text-align: center;
   font-weight: 500;
@@ -40,11 +40,11 @@
 }
 
 @media (min-width: 1000px) {
-  .home-section {
+  .home-section-two {
     margin: 120px 0;
   }
 
-  .home-section h2 {
+  .home-section-two h2 {
     font-size: 30px;
     margin: 30px 0;
   }

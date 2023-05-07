@@ -17,8 +17,8 @@
   gap: 5px;
   top: 20px;
   right: 0;
-  background-color: green;
-  width: 100px;
+  background-color: var(--green-dark);
+  width: 120px;
   height: 25px;
   color: white;
   font-size: 13px;
