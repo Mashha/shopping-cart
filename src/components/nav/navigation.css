@@ -47,7 +47,7 @@ nav {
   content: "";
   width: 5px;
   height: 5px;
-  background-color: #40b93c;
+  background-color: var(--green-light);
   border-radius: 100%;
   bottom: 11px;
   right: -7px;
@@ -87,7 +87,7 @@ nav {
 .nav-cart {
   background: transparent;
   padding: 7px;
-  border: 1px solid royalblue;
+  border: 1px solid var(--green-dark);
   border-radius: 3px;
   position: relative;
   cursor: pointer;
@@ -100,7 +100,7 @@ nav {
   position: absolute;
   bottom: -10px;
   right: -10px;
-  background-color: royalblue;
+  background-color: var(--green-dark);
   padding: 3px;
   width: 18px;
   height: 18px;
@@ -110,6 +110,7 @@ nav {
   align-items: center;
   font-size: 12px;
   color: white;
+  font-weight: 400;
 }
 
 .nav-items.show {
