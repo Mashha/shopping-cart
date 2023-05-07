@@ -26,9 +26,10 @@
 
 .details {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  padding: 5px 0 10px 0;
+  gap: 3px;
+  padding: 5px 5px 10px 5px;
 }
 
 .details h3,
@@ -43,5 +44,10 @@
 
   .card-image:hover img {
     transform: scale(1.5);
+  }
+
+  .details {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
