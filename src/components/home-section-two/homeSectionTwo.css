@@ -57,4 +57,28 @@
   .home-section-inner .card {
     max-width: 300px;
   }
+
+  .home-section-inner::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .home-section-inner::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+
+  .home-section-inner::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+  }
+  .home-section-inner::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+
+  @supports (scrollbar-color: red blue) {
+    .home-section-inner {
+      scrollbar-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.2);
+      scrollbar-width: thin;
+    }
+  }
 }
