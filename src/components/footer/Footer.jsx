@@ -1,7 +1,6 @@
 import React from "react";
 import "./footer.css";
 import { Link } from "react-router-dom";
-import logo from "../../images/logo4.png";
 
 function Footer() {
   return (
@@ -45,7 +44,7 @@ function Footer() {
       </div>
       <div className="footer-bottom">
         <p>
-          Build and designed with <i class="fa-solid fa-heart"></i> by{" "}
+          Build and designed with <i className="fa-solid fa-heart"></i> by{" "}
           <Link to="https://mashha.github.io/porfolio_MO/" target="_blank">
             Pimu
           </Link>{" "}

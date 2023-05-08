@@ -44,7 +44,6 @@ function Plant({ setShowModal, cart, setCart }) {
     if (!isInCart) {
       setCart([...cart, plant]);
     }
-    //localStorage.setItem("plant", JSON.stringify(cart))
   }
 
   return (

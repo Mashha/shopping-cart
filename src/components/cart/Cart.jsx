@@ -1,6 +1,5 @@
 import "./cart.css";
 import formatCurrency from "../../utils/formatCurrency";
-import { useState } from "react";
 
 function Cart({ showModal, onClose, cart, setCart, cartQuantity, cartTotal }) {
   if (!showModal) {
