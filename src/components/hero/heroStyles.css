@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@800&display=swap');
 
 .hero-section {
   width: 100%;
@@ -29,7 +30,7 @@
 }
 
 .left h3 {
-  font-family: "secular one", sans-serif;
+  font-family: "archivo", sans-serif;
   font-size: 40px;
   position: relative;
 }
