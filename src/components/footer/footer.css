@@ -59,6 +59,7 @@ footer:before {
   width: 90%;
   margin: auto;
   font-family: var(--text-font);
+  font-size: 15px;
 }
 
 .services h3,

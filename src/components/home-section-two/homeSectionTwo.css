@@ -21,7 +21,7 @@
 }
 
 .home-section-inner .card {
-  width: 340px;
+  width: 310px;
   flex: 0 0 auto;
 }
 
@@ -54,7 +54,7 @@
   }
 
   .home-section-inner .card {
-    max-width: 300px;
+    max-width: 340px;
   }
 
   .home-section-inner::-webkit-scrollbar {
