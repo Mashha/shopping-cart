@@ -49,6 +49,7 @@
   padding: 10px 35px;
   background-color: var(--green-light);
   position: relative;
+  z-index: 5;
 }
 
 .left p {
