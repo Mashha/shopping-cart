@@ -4,7 +4,6 @@
 .hero-section {
   width: 100%;
   display: grid;
-  height: calc(100vh - 70px);
 }
 
 .inner-hero-section {
@@ -139,6 +138,12 @@
   object-fit: cover;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px, rgba(0, 0, 0, 0.24) 0px 1px 1px;
+}
+
+@media (min-width: 428px ){
+  .hero-section {
+    height: calc(100vh - 70px);
+  }
 }
 
 @media (min-width: 1000px) {
