@@ -1,5 +1,5 @@
 import money_tree from "../../images/plants/money_tree.jpg";
-import money_tree_close from "../../images/plants/money_tree_close.jpg";
+import money_tree_details from "../../images/plants/money_tree_details.jpg";
 import philodendron from "../../images/plants/philodendron.jpg";
 import philodendron_close from "../../images/plants/philodendron-close.jpg";
 import calathea from "../../images/plants/calathea.jpg";
@@ -28,7 +28,7 @@ export const smallPlants = [
     description:
       "Said to bring good luck and fortune, the Money Tree is the perfect plant to add to any room of your home to create good Feng Shui. It is known for its resilience, ease of growth, and fun braided trunk.",
     size: "small",
-    gallery: [money_tree, money_tree_close],
+    gallery: [money_tree, money_tree_details],
     qty: 1,
     petFriendly: true,
     bestSeller: true
