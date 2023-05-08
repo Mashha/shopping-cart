@@ -5,7 +5,7 @@ import Plant from "../components/plant/Plant";
 import Contact from "../components/contact/Contact";
 import { AnimatePresence } from "framer-motion";
 
-function AnimatedRoutes(showModal, setShowModal, cart, setCart) {
+function AnimatedRoutes({showModal, setShowModal, cart, setCart}) {
   const location = useLocation();
   return (
     <AnimatePresence>

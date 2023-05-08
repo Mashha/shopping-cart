@@ -33,6 +33,7 @@ function App() {
         />
         <Cart
           showModal={showModal}
+          setShowModal={setShowModal}
           onClose={() => setShowModal(false)}
           cart={cart}
           setCart={setCart}
