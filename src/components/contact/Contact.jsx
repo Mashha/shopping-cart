@@ -1,6 +1,7 @@
 import React from "react";
 import "./contact.css";
 import Footer from "../footer/Footer";
+import { motion } from "framer-motion";
 
 function Contact() {
   function clickHandler(e) {
@@ -8,7 +9,12 @@ function Contact() {
   }
   return (
     <>
-      <div className="contact">
+      <motion.div
+        className="contact"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ ease: "easeIn" }}
+      >
         <div className="contact-inner">
           <div className="contact-info">
             <h1>Get In Touch</h1>
@@ -62,7 +68,7 @@ function Contact() {
             </form>
           </div>
         </div>
-      </div>
+      </motion.div>
       <Footer />
     </>
   );

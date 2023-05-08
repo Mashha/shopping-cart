@@ -1,12 +1,9 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./App.css";
-import Home from "./pages/Home";
-import Shop from "./pages/Shop";
 import Navigation from "./components/nav/Navigation";
-import Plant from "./components/plant/Plant";
 import Cart from "./components/cart/Cart";
-import Contact from "./components/contact/Contact";
+import AnimatedRoutes from "./components/AnimatedRoutes";
 
 const cartFromLocalStorage = JSON.parse(localStorage.getItem("cart") || "[]");
 
@@ -28,22 +25,12 @@ function App() {
     <>
       <BrowserRouter>
         <Navigation cartQuantity={cartQuantity} setShowModal={setShowModal} />
-        <Routes>
-          <Route path="/shopping-cart" element={<Home />} />
-          <Route path="/shopping-cart/products" element={<Shop />} />
-          <Route
-            path="/shopping-cart/products/:productId"
-            element={
-              <Plant
-                showModal={showModal}
-                setShowModal={setShowModal}
-                cart={cart}
-                setCart={setCart}
-              />
-            }
-          />
-          <Route path="/shopping-cart/contact" element={<Contact />} />
-        </Routes>
+        <AnimatedRoutes
+          showModal={showModal}
+          setShowModal={setShowModal}
+          cart={cart}
+          setCart={setCart}
+        />
         <Cart
           showModal={showModal}
           onClose={() => setShowModal(false)}

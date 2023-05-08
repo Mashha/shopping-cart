@@ -4,6 +4,7 @@ import "./styles/shop.css";
 import { useState } from "react";
 import { categories } from "../components/data/categories";
 import Footer from "../components/footer/Footer";
+import { motion } from "framer-motion";
 
 function Shop() {
   const [categoryId, setCategoryId] = useState("");
@@ -14,7 +15,12 @@ function Shop() {
 
   return (
     <>
-      <main className="main-shop">
+      <motion.main
+        className="main-shop"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ ease: "easeIn" }}
+      >
         <div className="main-top">
           <h1 className="shop-title">
             {categoryId ? categoryId + " " + "plants" : "Indoor plants"}
@@ -45,7 +51,7 @@ function Shop() {
             />
           ))}
         </div>
-      </main>
+      </motion.main>
       <Footer />
     </>
   );

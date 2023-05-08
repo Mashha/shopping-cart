@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { allProducts } from "../data/allProducts";
 import { useParams } from "react-router-dom";
 import formatCurrency from "../../utils/formatCurrency";
+import { motion } from "framer-motion";
 
 import "./plant.css";
 
@@ -22,7 +23,6 @@ function Plant({ setShowModal, cart, setCart }) {
 
   function changeImage(e) {
     setShowPlant(e.target);
-   
   }
 
   function addItemToCart() {
@@ -36,7 +36,7 @@ function Plant({ setShowModal, cart, setCart }) {
             isInCart = true;
             return { ...item, qty: item.qty + 1 };
           } else {
-            return item
+            return item;
           }
         })
       );
@@ -50,15 +50,20 @@ function Plant({ setShowModal, cart, setCart }) {
   return (
     <>
       {plant && (
-        <main className="main-plant">
+        <motion.main
+          className="main-plant"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ ease: "easeIn" }}
+        >
           <div className="main-left">
             <div className="small-images">
-              {plant.gallery.map(plant => (
-                 <div className="image">
-                 <Link onClick={(e) => changeImage(e)}>
-                   <img src={plant} alt="" />
-                 </Link>
-               </div>
+              {plant.gallery.map((plant) => (
+                <div className="image">
+                  <Link onClick={(e) => changeImage(e)}>
+                    <img src={plant} alt="" />
+                  </Link>
+                </div>
               ))}
             </div>
             <div className="main-image">
@@ -82,7 +87,7 @@ function Plant({ setShowModal, cart, setCart }) {
               <p>{plant.description}</p>
             </div>
           </div>
-        </main>
+        </motion.main>
       )}
     </>
   );
