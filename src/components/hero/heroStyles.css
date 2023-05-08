@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@800&display=swap");
 
 .hero-section {
   width: 100%;
@@ -28,6 +27,7 @@
   font-family: "Archivo", sans-serif;
   font-size: 40px;
   position: relative;
+  font-weight: 900;
 }
 
 .left h3::before {
