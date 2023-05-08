@@ -8,7 +8,6 @@
 
 .inner-hero-section {
   display: grid;
-  grid-gap: 10px;
   padding: 50px 15px;
   overflow: hidden;
   grid-template-rows: auto 1fr;
@@ -23,7 +22,6 @@
   gap: 30px;
   grid-column: 1/-1;
   position: relative;
-  padding-bottom: 20px;
 }
 
 .left h3 {
@@ -140,7 +138,7 @@
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px, rgba(0, 0, 0, 0.24) 0px 1px 1px;
 }
 
-@media (min-width: 428px ){
+@media (min-width: 428px) {
   .hero-section {
     height: calc(100vh - 70px);
   }
