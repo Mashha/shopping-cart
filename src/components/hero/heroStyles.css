@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@800&display=swap");
 
 .hero-section {
   width: 100%;
@@ -30,7 +28,7 @@
 }
 
 .left h3 {
-  font-family: "archivo", sans-serif;
+  font-family: "Archivo", sans-serif;
   font-size: 40px;
   position: relative;
 }
@@ -40,7 +38,7 @@
   content: "";
   width: 70px;
   height: 7px;
-  top: 0;
+  top: -5px;
   border-radius: 10px;
   background-color: var(--green-light);
 }
@@ -164,7 +162,7 @@
   }
 
   .left h3::before {
-    top: 8px;
+    top: -2px;
   }
 
   .left p {
