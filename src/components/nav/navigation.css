@@ -11,7 +11,7 @@ header {
 nav {
   display: grid;
   grid-template-columns: auto 1fr auto;
-  grid-template-areas: "menu logo cart";
+  grid-template-areas: "menu logo buttons";
   align-items: center;
   width: 100%;
   position: relative;
@@ -96,7 +96,6 @@ nav {
   border-radius: 3px;
   position: relative;
   cursor: pointer;
-  grid-area: cart;
   justify-self: end;
   align-self: center;
 }
@@ -118,11 +117,30 @@ nav {
   font-weight: 400;
 }
 
+.nav-buttons {
+  grid-area: buttons;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.login,
+.logout {
+  border: 1px solid var(--green-dark);
+  height: 32px;
+  padding: 0 4px;
+  border-radius: 5px;
+  background: transparent;
+  font-family: var(--text-font);
+  letter-spacing: 1px;
+  font-size: 13px;
+}
+
 .nav-items.show {
   display: flex;
 }
 
-@media (min-width: 670px) {
+@media (min-width: 790px) {
   .burger-menu {
     display: none;
   }
@@ -148,7 +166,7 @@ nav {
 
   nav {
     padding: 0 30px;
-    grid-template-areas: "logo menu cart";
+    grid-template-areas: "logo menu buttons";
     grid-template-columns: auto 1fr auto;
   }
 
@@ -158,6 +176,11 @@ nav {
 
   .logo h1 {
     font-size: 25px;
+  }
+  .nav-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
   }
 }
 

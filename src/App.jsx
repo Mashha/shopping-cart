@@ -4,6 +4,10 @@ import "./App.css";
 import Navigation from "./components/nav/Navigation";
 import Cart from "./components/cart/Cart";
 import AnimatedRoutes from "./components/AnimatedRoutes";
+import LoginButton from "./components/login/LoginButton";
+import LogoutButton from "./components/login/LogOutButton";
+import Profile from "./components/profile/Profile";
+import { useAuth0 } from "@auth0/auth0-react";
 
 const cartFromLocalStorage = JSON.parse(localStorage.getItem("cart") || "[]");
 
@@ -21,16 +25,32 @@ function App() {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 
+  const { isLoading, error } = useAuth0();
+
   return (
     <>
       <BrowserRouter>
-        <Navigation cartQuantity={cartQuantity} setShowModal={setShowModal} />
+        <Navigation
+          cartQuantity={cartQuantity}
+          setShowModal={setShowModal}
+          login={<LoginButton />}
+          logout={<LogoutButton />}
+          profile={<Profile />}
+        />
         <AnimatedRoutes
           showModal={showModal}
           setShowModal={setShowModal}
           cart={cart}
           setCart={setCart}
         />
+        {error && <p>Authentication error</p>}
+        {!error && !isLoading && (
+          <>
+            <LoginButton />
+            <LogoutButton />
+            <Profile />
+          </>
+        )}
         <Cart
           showModal={showModal}
           setShowModal={setShowModal}

@@ -1,7 +1,15 @@
 import "./cart.css";
 import formatCurrency from "../../utils/formatCurrency";
 
-function Cart({ showModal, setShowModal, onClose, cart, setCart, cartQuantity, cartTotal }) {
+function Cart({
+  showModal,
+  setShowModal,
+  onClose,
+  cart,
+  setCart,
+  cartQuantity,
+  cartTotal,
+}) {
   if (!showModal) {
     return null;
   }
@@ -16,6 +24,7 @@ function Cart({ showModal, setShowModal, onClose, cart, setCart, cartQuantity, c
       })
     );
   }
+  console.log(cart);
 
   function decrease(e) {
     if (cart.length > 0) {
@@ -37,13 +46,16 @@ function Cart({ showModal, setShowModal, onClose, cart, setCart, cartQuantity, c
     setCart(cart.filter((plant) => plant.id !== e.target.id));
   }
 
-  function closeModal(){
-    setShowModal(false)
+  function closeModal() {
+    setShowModal(false);
   }
 
   return (
     <div className="shopping-cart-modal" onClick={closeModal}>
-      <div className="shopping-cart-modal-inner" onClick={e => e.stopPropagation()}>
+      <div
+        className="shopping-cart-modal-inner"
+        onClick={(e) => e.stopPropagation()}
+      >
         <span className="btn-close" onClick={onClose}>
           <i className="fa-solid fa-xmark"></i>
         </span>

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import logo from "../../images/logo4.png";
 import { useState } from "react";
 
-function Navigation({ cartQuantity, setShowModal }) {
+function Navigation({ cartQuantity, setShowModal, login, logout, profile }) {
   const [showNav, setShowNav] = useState(false);
 
   function handleClick() {
@@ -39,10 +39,15 @@ function Navigation({ cartQuantity, setShowModal }) {
             </Link>
           </li>
         </ul>
-        <button className="nav-cart" onClick={() => setShowModal(true)}>
-          <i className="fa-solid fa-cart-shopping"></i>
-          <span className="items-number">{cartQuantity}</span>
-        </button>
+        <div className="nav-buttons">
+          <>
+            {login} {logout} {profile}
+          </>
+          <button className="nav-cart" onClick={() => setShowModal(true)}>
+            <i className="fa-solid fa-cart-shopping"></i>
+            <span className="items-number">{cartQuantity}</span>
+          </button>
+        </div>
         <div className="burger-menu" onClick={handleClick}>
           {showNav ? (
             <i className="fa-solid fa-xmark"></i>
