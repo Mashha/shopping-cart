@@ -41,7 +41,8 @@ function Navigation({ cartQuantity, setShowModal, login, logout, profile }) {
         </ul>
         <div className="nav-buttons">
           <>
-            {login} {logout} {profile}
+            {login} {logout}
+            <Link to="/shopping-cart/dashboard">{profile}</Link>
           </>
           <button className="nav-cart" onClick={() => setShowModal(true)}>
             <i className="fa-solid fa-cart-shopping"></i>

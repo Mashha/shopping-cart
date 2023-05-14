@@ -4,8 +4,16 @@ import Shop from "../pages/Shop";
 import Plant from "../components/plant/Plant";
 import Contact from "../components/contact/Contact";
 import { AnimatePresence } from "framer-motion";
+import Dashboard from "./dashboard/Dashboard";
 
-function AnimatedRoutes({showModal, setShowModal, cart, setCart}) {
+function AnimatedRoutes({
+  showModal,
+  setShowModal,
+  cart,
+  setCart,
+  user,
+  isAuthenticated,
+}) {
   const location = useLocation();
   return (
     <AnimatePresence>
@@ -22,6 +30,10 @@ function AnimatedRoutes({showModal, setShowModal, cart, setCart}) {
               setCart={setCart}
             />
           }
+        />
+        <Route
+          path="/shopping-cart/dashboard"
+          element={<Dashboard user={user} isAuthenticated={isAuthenticated} />}
         />
         <Route path="/shopping-cart/contact" element={<Contact />} />
       </Routes>

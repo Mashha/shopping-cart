@@ -76,7 +76,7 @@ function Cart({
                   <div className="cart-data-bottom">
                     <div className="multiple-items" id={item.id}>
                       <button onClick={(e) => decrease(e)}>
-                        <i class="fa-solid fa-minus"></i>
+                        <i className="fa-solid fa-minus"></i>
                       </button>
                       <span>{item.qty}</span>
                       <button onClick={(e) => increase(e)}>

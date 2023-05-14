@@ -26,6 +26,7 @@ function App() {
   }, [cart]);
 
   const { isLoading, error } = useAuth0();
+  const { user, isAuthenticated } = useAuth0();
 
   return (
     <>
@@ -35,22 +36,17 @@ function App() {
           setShowModal={setShowModal}
           login={<LoginButton />}
           logout={<LogoutButton />}
-          profile={<Profile />}
+          profile={<Profile user={user} isAuthenticated={isAuthenticated} />}
         />
         <AnimatedRoutes
           showModal={showModal}
           setShowModal={setShowModal}
           cart={cart}
           setCart={setCart}
+          user={user}
+          isAuthenticated={isAuthenticated}
         />
-        {error && <p>Authentication error</p>}
-        {!error && !isLoading && (
-          <>
-            <LoginButton />
-            <LogoutButton />
-            <Profile />
-          </>
-        )}
+        {error && alert("Authentication error")}
         <Cart
           showModal={showModal}
           setShowModal={setShowModal}

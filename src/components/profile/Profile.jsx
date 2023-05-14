@@ -1,9 +1,7 @@
-import { useAuth0 } from "@auth0/auth0-react";
+import { Link } from "react-router-dom";
 import "./profile.css";
 
-function Profile() {
-  const { user, isAuthenticated } = useAuth0();
-
+function Profile({ user, isAuthenticated }) {
   return (
     isAuthenticated && (
       <div className="profile-img">
